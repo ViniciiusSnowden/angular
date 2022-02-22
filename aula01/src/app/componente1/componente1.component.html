@@ -1,0 +1,11 @@
+<p *ngIf="exibir">Estou aprendendo Angular</p>
+<!-- <ng-template [ngIf]="exibir">Estou aprendendo Angular</ng-template> -->
+
+<ol>
+    <li *ngFor="let n of nomes">{{n}}</li>
+</ol>
+<!-- <ol>
+    <ng-template ngFor let-n [ngForOf]="nomes">{{n}}</ng-template>
+</ol> -->
+
+<h1 [ngClass]="{'fundo' : exibirFundo === true}">Diretiva ngClass</h1>
