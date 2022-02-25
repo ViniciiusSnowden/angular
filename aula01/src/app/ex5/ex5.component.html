@@ -1,0 +1,13 @@
+<table>
+    <tr>
+        <td>Palavra</td>
+        <td>Vogais</td>
+        <td>Consoantes</td>
+    </tr>
+
+    <tr *ngFor="let p of palavras">
+        <td>{{p}}</td>
+        <td>{{p | vogais}}</td>
+        <td>{{p | consoantes}}</td>
+    </tr>
+</table>

@@ -1,1 +1,7 @@
-<p>componente2 works!</p>
+<ul>
+    <li *ngFor="let n of nomes">{{n}} - {{n | meuPipe}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let v of valores">{{v | currency:"EUR"}}</li>
+</ul>

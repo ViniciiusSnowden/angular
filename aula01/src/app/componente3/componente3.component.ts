@@ -12,4 +12,6 @@ export class Componente3Component implements OnInit {
   ngOnInit(): void {
   }
 
+  texto:string = 'Hello!';
+
 }

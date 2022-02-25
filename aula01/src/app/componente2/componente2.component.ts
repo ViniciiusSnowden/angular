@@ -12,4 +12,7 @@ export class Componente2Component implements OnInit {
   ngOnInit(): void {
   }
 
+  nomes:string[] = ['Letícia', 'Gilson', 'Gabriela', 'Jonas'];
+
+  valores:number[] = [5, 7, 8, 10];
 }
