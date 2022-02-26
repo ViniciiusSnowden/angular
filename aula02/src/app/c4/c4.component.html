@@ -1,0 +1,6 @@
+<h1>{{formulario.value | json}}</h1>
+
+<form [formGroup]="formulario">
+    <input type="text" name="nome" formControlName="nome">
+    <input type="number" name="idade" formControlName="idade">
+</form>

@@ -1,0 +1,25 @@
+<form [formGroup]="formulario" (submit)="cadastro()">
+    <input type="text"   class="form-control" formControlName="nome" placeholder="Nome">
+    <input type="number" class="form-control" formControlName="idade" placeholder="Idade">
+    <input type="submit" class="btn btn-primary">
+</form>
+
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Remover</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let d of dados; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{d.nome}}</td>
+            <td>{{d.idade}}</td>
+            <td><button (click)="excluir(i)" class="btn btn-danger">Remover</button></td>
+        </tr>
+    </tbody>
+</table>
