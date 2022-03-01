@@ -1,0 +1,31 @@
+<!-- Formuluário -->
+<form>
+    <input type="text" placeholder="Nome" class="form-control">
+    <input type="numer" placeholder="Idade" class="form-control">
+
+    <input type="button" value="Cadastrar" class="btn btn-primary"   *ngIf="btnCadastrar">
+    <input type="button" value="Alterar"   class="btn btn-warning"   *ngIf="!btnCadastrar">
+    <input type="button" value="Remover"   class="btn btn-danger"    *ngIf="!btnCadastrar">
+    <input type="button" value="Cancelar"  class="btn btn-secondary" *ngIf="!btnCadastrar">
+</form>
+
+<!-- Tabela -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Selecionar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let v of vetor; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{v.nome}}</td>
+            <td>{{v.idade}}</td>
+            <td><button class="btn btn-success">Selecionar</button></td>
+        </tr>
+    </tbody>
+</table>
