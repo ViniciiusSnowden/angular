@@ -1,12 +1,12 @@
 <!-- Formuluário -->
-<form>
-    <input type="text" placeholder="Nome" class="form-control">
-    <input type="numer" placeholder="Idade" class="form-control">
+<form [formGroup]="formulario">
+    <input type="text"   formControlName="nome" placeholder="Nome"  class="form-control">
+    <input type="number" formControlName="idade" placeholder="Idade" class="form-control">
 
-    <input type="button" value="Cadastrar" class="btn btn-primary"   *ngIf="btnCadastrar">
-    <input type="button" value="Alterar"   class="btn btn-warning"   *ngIf="!btnCadastrar">
-    <input type="button" value="Remover"   class="btn btn-danger"    *ngIf="!btnCadastrar">
-    <input type="button" value="Cancelar"  class="btn btn-secondary" *ngIf="!btnCadastrar">
+    <input type="button" (click)="cadastrar()" value="Cadastrar" class="btn btn-primary"   *ngIf="btnCadastrar">
+    <input type="button" (click)="alterar()"   value="Alterar"   class="btn btn-warning"   *ngIf="!btnCadastrar">
+    <input type="button" (click)="remover()"   value="Remover"   class="btn btn-danger"    *ngIf="!btnCadastrar">
+    <input type="button" (click)="cancelar()"  value="Cancelar"  class="btn btn-secondary" *ngIf="!btnCadastrar">
 </form>
 
 <!-- Tabela -->
@@ -25,7 +25,7 @@
             <td>{{i+1}}</td>
             <td>{{v.nome}}</td>
             <td>{{v.idade}}</td>
-            <td><button class="btn btn-success">Selecionar</button></td>
+            <td><button class="btn btn-success" (click)="selecionar(i)">Selecionar</button></td>
         </tr>
     </tbody>
 </table>

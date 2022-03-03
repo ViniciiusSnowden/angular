@@ -1,0 +1,15 @@
+<form [formGroup]="formulario">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Usuário</mat-label>
+        <input matInput formControlName="usuario">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput formControlName="senha">
+    </mat-form-field>
+
+    <button (click)="login()" mat-raised-button color="primary">Enviar</button>
+
+</form>

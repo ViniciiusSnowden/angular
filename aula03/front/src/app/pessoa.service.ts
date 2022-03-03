@@ -18,13 +18,13 @@ export class PessoaService {
 
   // Cadastrar pessoas
   cadastrar(p:Pessoa):Observable<Pessoa>{
-    return this.http.post<Pessoa>('http://localhost:3000/pessoas', JSON.stringify(p));
+    return this.http.post<Pessoa>('http://localhost:3000/pessoas', p);
   }
 
   // Editar pessoas
   editar(p:Pessoa, id:number):Observable<Pessoa>{
-    //return this.http.put<Pessoa>('http://localhost:3000/pessoas/'+id, JSON.stringify(p));
-    return this.http.put<Pessoa>(`http://localhost:3000/pessoas/${id}`, JSON.stringify(p));
+    //return this.http.put<Pessoa>('http://localhost:3000/pessoas/'+id, p);
+    return this.http.put<Pessoa>(`http://localhost:3000/pessoas/${id}`, p);
   }
 
   // Remover pessoas
